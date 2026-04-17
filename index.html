@@ -162,7 +162,7 @@
             <template x-for="item in productGroups" :key="item.name">
               <article class="rounded-xl border border-slate-200 p-4 shadow-sm">
                 <div class="mb-3 flex items-center gap-3">
-                  <img src="./assets/Gemini_Generated_Image_ct57tbct57tbct57.png" alt="Placeholder icon" class="h-10 w-10 rounded" />
+                  <img x-bind:src="item.image" alt="Placeholder icon" class="h-10 w-10 rounded" />
                   <h3 class="font-semibold text-slate-900" x-text="item.name"></h3>
                 </div>
                 <p class="text-sm" x-text="item.desc"></p>
@@ -269,12 +269,12 @@
             message: ""
           },
           productGroups: [
-            { name: "Vertical Inline Pumps", desc: "Pressure boosting, RO systems, fire fighting, and cleaning systems."  },
-            { name: "End Suction & Split Casing Pumps", desc: "Circulation, cooling/heating plants, irrigation, and industrial transfer." },
-            { name: "Fire Pump Sets", desc: "UL/FM and non-UL/FM solutions for commercial, industrial, and infrastructure projects." },
-            { name: "Submersible & Sewage Pumps", desc: "Drainage, dewatering, wastewater handling, and groundwater extraction." },
-            { name: "Booster Systems", desc: "Pressure boosting systems for buildings, hotels, hospitals, and industries." },
-            { name: "Motors & Control Panels", desc: "Single/three-phase motors, VFD/VSD panels, PLC, and custom control solutions." }
+            { name: "Vertical Inline Pumps", desc: "Pressure boosting, RO systems, fire fighting, and cleaning systems.", image: "./assets/Vertical Inline Pumps.png" },
+            { name: "End Suction & Split Casing Pumps", desc: "Circulation, cooling/heating plants, irrigation, and industrial transfer.", image: "./assets/End Suction & Split Casing Pumps.png" },
+            { name: "Fire Pump Sets", desc: "UL/FM and non-UL/FM solutions for commercial, industrial, and infrastructure projects.", image: "./assets/Fire Pump Sets.png" },
+            { name: "Submersible & Sewage Pumps", desc: "Drainage, dewatering, wastewater handling, and groundwater extraction.", image: "./assets/Submersible & Sewage Pumps.png" },
+            { name: "Booster Systems", desc: "Pressure boosting systems for buildings, hotels, hospitals, and industries.", image: "./assets/Booster Systems.png" },
+            { name: "Motors & Control Panels", desc: "Single/three-phase motors, VFD/VSD panels, PLC, and custom control solutions.", image: "./assets/Motors & Control Panels.png" }
           ],
           buildMessage() {
             return `Name: ${this.form.name}\nEmail: ${this.form.email}\nMessage: ${this.form.message}`;
