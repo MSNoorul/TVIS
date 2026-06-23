@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TVIS Design System — Clean corporate, deep blue + steel */
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 215 45% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 45% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 45% 12%;
+
+    /* Brand: deep marine blue */
+    --primary: 214 88% 22%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 210 90% 48%;
+
+    /* Steel accent */
+    --secondary: 210 30% 94%;
+    --secondary-foreground: 214 88% 22%;
+
+    --muted: 210 30% 96%;
+    --muted-foreground: 215 16% 42%;
+
+    /* Cyan accent for highlights */
+    --accent: 195 88% 45%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 25% 88%;
+    --input: 214 25% 90%;
+    --ring: 214 88% 22%;
+
+    --radius: 0.75rem;
+
+    /* Gradients & effects */
+    --gradient-hero: linear-gradient(135deg, hsl(214 88% 18% / 0.92), hsl(214 88% 22% / 0.78) 50%, hsl(195 88% 35% / 0.65));
+    --gradient-brand: linear-gradient(135deg, hsl(214 88% 22%), hsl(210 90% 38%));
+    --gradient-soft: linear-gradient(180deg, hsl(210 40% 99%), hsl(210 35% 96%));
+    --gradient-cta: linear-gradient(135deg, hsl(195 88% 45%), hsl(210 90% 48%));
+
+    --shadow-elegant: 0 20px 60px -20px hsl(214 88% 22% / 0.25);
+    --shadow-card: 0 8px 30px -12px hsl(214 50% 25% / 0.18);
+    --shadow-glow: 0 0 60px hsl(195 88% 50% / 0.35);
+
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 45% 7%;
+    --foreground: 210 40% 98%;
+    --card: 215 40% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 40% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 90% 55%;
+    --primary-foreground: 215 45% 7%;
+    --secondary: 215 30% 16%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 30% 16%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 195 88% 45%;
+    --accent-foreground: 215 45% 7%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
+    --ring: 210 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+  /* RTL Arabic typography */
+  html[dir="rtl"] body,
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] h4 {
+    font-family: 'Noto Kufi Arabic', sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-brand {
+    background-image: var(--gradient-brand);
+  }
+  .bg-gradient-cta {
+    background-image: var(--gradient-cta);
+  }
+  .bg-gradient-soft {
+    background-image: var(--gradient-soft);
+  }
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  .shadow-card-soft {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .text-gradient-brand {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  height: 3px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+}
+
+.thin-scrollbar {
+  scrollbar-width: thin;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
