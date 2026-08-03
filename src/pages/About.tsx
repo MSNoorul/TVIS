@@ -2,16 +2,31 @@ import { Layout } from "@/components/Layout";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Target, Eye, Award, Users } from "lucide-react";
-import installImg from "@/assets/install-pumpsystem-1.jpg";
 
 const About = () => {
   const { t } = useLanguage();
 
   const pillars = [
-    { icon: Eye, title: "Vision", body: "To be a trusted pump supplier known for quality, innovation, and smart investments that support long-term reliability and service excellence." },
-    { icon: Target, title: "Mission", body: "To deliver reliable, high-quality pump solutions with great service and support, meeting customer needs through trusted products." },
-    { icon: Award, title: "Quality", body: "Premium global brands, certified workmanship and rigorous testing on every system we deliver." },
-    { icon: Users, title: "Partnership", body: "A dedicated technical and electrical support network responding fast — even in critical downtime situations." },
+    {
+      icon: Award,
+      title: "Quality",
+      body: "We deliver high-quality pump systems backed by deep technical expertise and strong global manufacturer partnerships, trusted for precise selection and reliable support.",
+    },
+    {
+      icon: Users,
+      title: "Partnership",
+      body: "Our partner network with major global brands gives us dedicated sales, technical, and electrical support — ensuring fast response in critical situations.",
+    },
+    {
+      icon: Eye,
+      title: "Vision",
+      body: "To be a trusted pump supplier known for quality, innovation, and smart investments supporting long-term reliability and service excellence.",
+    },
+    {
+      icon: Target,
+      title: "Mission",
+      body: "To deliver reliable, high-quality pump solutions with great service and support, meeting every customer need through trusted products.",
+    },
   ];
 
   return (
@@ -19,44 +34,43 @@ const About = () => {
       <section className="relative bg-gradient-brand text-primary-foreground py-20 sm:py-28">
         <div className="container">
           <div className="max-w-3xl animate-fade-up">
-            <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">{t.aboutPreview.eyebrow}</div>
+            <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">
+              {t.aboutPreview.eyebrow}
+            </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
               {t.aboutPreview.title}
             </h1>
-            <p className="mt-6 text-lg text-primary-foreground/85 leading-relaxed">{t.aboutPreview.body}</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 sm:py-24">
-        <div className="container grid lg:grid-cols-2 gap-12 items-center">
-          <img
-            src={installImg}
-            alt="Installed pump system"
-            className="rounded-2xl shadow-elegant w-full aspect-[4/3] object-cover"
-            loading="lazy"
-          />
-          <div className="space-y-6">
-            <SectionHeading
-              eyebrow="Strategic Strengths"
-              title="Built on partnerships and technical depth"
-              subtitle="One of our key strengths is our robust partner network. We collaborate with major global brands, offering dedicated sales, technical and electrical support across all product lines — from system design and product selection to post-installation service and emergency response."
-            />
+            <p className="mt-6 text-lg text-primary-foreground/85 leading-relaxed">
+              {t.aboutPreview.body}
+            </p>
           </div>
         </div>
       </section>
 
       <section className="py-20 sm:py-24 bg-gradient-soft">
         <div className="container">
-          <SectionHeading align="center" eyebrow="What drives us" title="Vision, mission & values" />
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <SectionHeading
+            align="center"
+            eyebrow=""
+            title="Why We're Your Best Choice"
+            subtitle="We supply high-quality water pump systems supported by deep technical expertise and strong collaborations with global manufacturers — from precise product selection to responsive after-sales service."
+          />
+
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
             {pillars.map((p, i) => (
-              <div key={i} className="bg-card rounded-2xl p-7 border border-border hover:shadow-elegant transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-gradient-brand text-primary-foreground flex items-center justify-center mb-5">
+              <div
+                key={i}
+                className="h-full flex flex-col bg-card rounded-2xl p-7 border border-border hover:shadow-elegant hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-brand text-primary-foreground flex items-center justify-center mb-5 shrink-0">
                   <p.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-display font-bold text-lg text-primary mb-2">{p.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.body}</p>
+                <h3 className="font-display font-bold text-lg text-primary mb-2">
+                  {p.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  {p.body}
+                </p>
               </div>
             ))}
           </div>
