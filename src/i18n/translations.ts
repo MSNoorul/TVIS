@@ -27,13 +27,13 @@ export const translations = {
       stat3Label: "Global Partnerships",
     },
     sectors: {
-      title: "Sectors We Power",
+      title: "We serve a wide range of sectors across Saudi Arabia",
       subtitle: "Reliable, efficient pumping solutions across every demanding environment.",
       items: [
         "Industrial Operations",
         "Residential & Domestic",
         "Agricultural & Irrigation",
-        "Building Services",
+        "Commercial Building Services",
         "Wastewater & Sewage",
         "Groundwater Extraction",
         "Pools & Wellness",
@@ -41,11 +41,10 @@ export const translations = {
       ],
     },
     aboutPreview: {
-      eyebrow: "About TVIS",
-      title: "A trusted partner for end-to-end pump solutions",
+      eyebrow: "About",
+      title: "Who We Are",
       body:
-        "Founded in 2024 with offices in Riyadh and Buraidah, TVIS Trading & Contracting is built on quality, innovation, and customer satisfaction. Our partnerships with leading global manufacturers let us respond fast — from system design and selection to commissioning and emergency service.",
-      cta: "Learn more about us",
+        "TVIS operates under a newly updated commercial registration, marking a strategic evolution of our business identity. Although the CR has been renewed, our presence in the Saudi market extends well over a decade. For more than 10 years, our team has been actively serving clients in Riyadh and Buraidah, delivering pump solutions, technical support, and industrial services under previous company structures. Today, with our updated CR name and number, we continue the same trusted journey with enhanced capabilities, clearer organizational direction, and expanded partnerships—ensuring stronger performance and consistent service excellence for all our clients",
     },
     services: {
       title: "Services",
@@ -91,9 +90,10 @@ export const translations = {
       title: "Contact Us",
       subtitle: "Reach out for technical consultation, project quotation or service support.",
       addressLabel: "Office",
-      address: "PO Box 7409, Postal Code 52384 — Riyadh & Buraidah, Saudi Arabia",
+    address1: "Building No: 7955, Postal Code 14258 — Al Furosyah, Al Saadah Dist, Riyadh, Saudi Arabia",
+address2: "Building No: 7409, Postal Code 52384 — Omar Ibn Al Khattab Branch, Al Iskan Dist, Buraidah, Saudi Arabia",
       emailLabel: "Email",
-      email: "tvish_tc@outlook.com",
+      email: "sales-services@tvis24.com",
       formName: "Your Name",
       formEmail: "Email Address",
       formCompany: "Company",
@@ -132,13 +132,13 @@ export const translations = {
       stat3Label: "شراكات عالمية",
     },
     sectors: {
-      title: "القطاعات التي نخدمها",
+      title: "نخدم مجموعة واسعة من القطاعات في جميع أنحاء المملكة العربية السعودية",
       subtitle: "حلول ضخ موثوقة وفعّالة لكل بيئة تشغيل.",
       items: [
         "العمليات الصناعية",
         "الأنظمة السكنية والمنزلية",
         "الزراعة والري",
-        "خدمات المباني",
+        "خدمات المباني التجارية",
         "الصرف الصحي ومعالجة المياه",
         "استخراج المياه الجوفية",
         "المسابح والاستجمام",
@@ -146,11 +146,12 @@ export const translations = {
       ],
     },
     aboutPreview: {
-      eyebrow: "عن TVIS",
-      title: "شريك موثوق لحلول المضخات المتكاملة",
-      body:
-        "تأسست TVIS عام 2024 بمكاتب في الرياض والبريدة، وقامت على الجودة والابتكار ورضا العملاء. شراكاتنا مع كبرى الشركات المصنّعة عالميًا تتيح لنا الاستجابة السريعة — من تصميم الأنظمة والاختيار حتى التشغيل وخدمة الطوارئ.",
-      cta: "اعرف المزيد عنا",
+      eyebrow: "عن ",
+      title: "من نحن",
+      body: `تعمل شركة TVIS بموجب سجل تجاري مُحدَّث يعكس التطور الاستراتيجي لهوية أعمالنا. وعلى الرغم من تجديد السجل التجاري، فإن وجودنا في السوق السعودية يمتد لأكثر من عشر سنوات. فعلى مدار أكثر من عقد من الزمن، عمل فريقنا بنشاط على خدمة العملاء في الرياض وبريدة، من خلال تقديم حلول المضخات والدعم الفني والخدمات الصناعية ضمن هياكل مؤسسية سابقة.
+
+واليوم، ومع تحديث اسم السجل التجاري ورقمه، نواصل المسيرة نفسها التي اكتسبت ثقة عملائنا، مع تعزيز قدراتنا وتوضيح توجهنا التنظيمي وتوسيع نطاق شراكاتنا، بما يضمن أداءً أقوى ومستوىً ثابتًا من التميز في تقديم الخدمات لجميع عملائنا.
+`,
     },
     services: {
       title: "خدماتنا",
@@ -196,9 +197,10 @@ export const translations = {
       title: "تواصل معنا",
       subtitle: "للاستشارة الفنية أو طلب عرض سعر أو دعم الخدمة.",
       addressLabel: "المكتب",
-      address: "ص.ب 7409، الرمز البريدي 52384 — الرياض والبريدة، المملكة العربية السعودية",
+      address1: "فرع الرياض وبريدة — رقم المبنى: 7955 (الرمز البريدي: 14258)، رقم المبنى: 7409 (الرمز البريدي: 52384)، المملكة العربية السعودية",
+address2: "فرع الرياض وبريدة — رقم المبنى: 7955 (الرمز البريدي: 14258)، رقم المبنى: 7409 (الرمز البريدي: 52384)، المملكة العربية السعودية",
       emailLabel: "البريد الإلكتروني",
-      email: "tvish_tc@outlook.com",
+      email: "sales-services@tvis24.com",
       formName: "الاسم",
       formEmail: "البريد الإلكتروني",
       formCompany: "الشركة",

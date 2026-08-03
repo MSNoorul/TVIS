@@ -168,7 +168,8 @@ const projects: Project[] = [
   },
 ];
 
-const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
+// const categories = ["All", ...Array.from(new Set(projects.map((p) => p.category)))];
+const categories = ["All"];
 
 import { useState } from "react";
 
@@ -192,9 +193,9 @@ const Projects = () => {
       </section>
 
       {/* Filter pills */}
-      <section className="py-6 border-b border-border bg-gradient-soft  sticky top-[65px] z-30 backdrop-blur-md bg-background/85">
+      <section className="py-4 border-b border-border bg-gradient-soft  sticky top-[65px] z-30 backdrop-blur-md bg-background/85">
         <div className="container">
-          <div className="flex gap-2 overflow-x-auto hide-scrollbar pb-2 -mx-1 px-1">
+          <div className="flex gap-2overflow-x-auto hide-scrollbar pb-2 -mx-1 px-1">
             {categories.map((c) => (
               <button
                 key={c}

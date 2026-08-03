@@ -22,7 +22,11 @@ export const Footer = () => {
           <ul className="space-y-3 text-sm text-primary-foreground/85">
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent" />
-              <span>{t.contact.address}</span>
+              <span>{t.contact.address1}</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent" />
+              <span>{t.contact.address2}</span>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent" />
