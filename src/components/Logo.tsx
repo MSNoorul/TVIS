@@ -7,8 +7,8 @@ export const Logo = ({ inverted = false }: { inverted?: boolean }) => {
   return (
     <Link to="/" className="flex items-center gap-3 group">
       <div className="relative">
-        <div className="  w-10 h-10  flex items-center justify-center">
-          <img src={navIcon} alt="TVIS Logo" />
+        <div className=" bg-white w-10 h-10 rounded-xl flex items-center justify-center">
+          <img src={navIcon} alt="TVIS Logo" className="w-10 h-10" />
         </div>
       </div>
       <div className="leading-tight">
