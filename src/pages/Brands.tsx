@@ -2,7 +2,11 @@ import { Layout } from "@/components/Layout";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { BrandLogoCard } from "@/components/BrandLogoCard";
-import { brands } from "@/data/brands";
+import { brands, type BrandMark } from "@/data/brands";
+import { Droplet, Zap, Settings2 } from "lucide-react";
+
+const categoryOrder: BrandMark["category"][] = ["pumps", "electrical", "mechanical"];
+const categoryIcons = { pumps: Droplet, electrical: Zap, mechanical: Settings2 };
 
 const Brands = () => {
   const { t } = useLanguage();
@@ -21,13 +25,28 @@ const Brands = () => {
         <div className="container">
           <SectionHeading
             align="center"
-            eyebrow="Pumps · Electrical · Automation"
-            title="Authorised channel for global leaders"
+            eyebrow={t.brands.heading.eyebrow}
+            title={t.brands.heading.title}
           />
-          <div className="mt-14 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {brands.map((b, i) => (
-              <BrandLogoCard key={i} brand={b} />
-            ))}
+          <div className="mt-14">
+            {categoryOrder.map((cat) => {
+              const CategoryIcon = categoryIcons[cat];
+              return (
+                <div key={cat} className="mb-16 last:mb-0">
+                  <div className="flex items-center gap-3 mb-6">
+                    <CategoryIcon className="w-5 h-5 text-accent" />
+                    <h3 className="font-display font-bold text-lg text-primary">{t.brands.categories[cat]}</h3>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {brands
+                      .filter((b) => b.category === cat)
+                      .map((b, i) => (
+                        <BrandLogoCard key={i} brand={b} />
+                      ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <p className="mt-10 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
             All trademarks, names and logos are the property of their respective owners and are used here
