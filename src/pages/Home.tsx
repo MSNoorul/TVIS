@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
 import heroImg from "@/assets/hero-pumproom.jpg";
 import productsCollection from "@/assets/products-collection.jpg";
-import installImg from "@/assets/install-pumpsystem-1.jpg";
+import installImg from "@/assets/Gemini_Generated_Image_uj2pt7uj2pt7uj2p.png";
 
 const sectorIcons = [Factory, Building2, Sprout, Building2, Waves, Pickaxe, Bath, Snowflake];
 
