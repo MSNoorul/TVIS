@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads/projects"
+public_folder: "/uploads/projects"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    files:
+      - file: "src/data/projects.json"
+        label: "Completed Projects"
+        name: "projects"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.category}}"
+            fields:
+              - { label: "Image", name: "img", widget: "image" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+              - label: "Scope"
+                name: "scope"
+                widget: "list"
+                label_singular: "Scope item"
