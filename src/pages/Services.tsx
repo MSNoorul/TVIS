@@ -40,7 +40,7 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-soft">
+      <section className="py-20 bg-gradient-soft hidden">
         <div className="container grid lg:grid-cols-2 gap-12 items-center">
           <img
             src={panelImg}

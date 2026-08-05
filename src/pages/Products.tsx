@@ -2,16 +2,7 @@ import { Layout } from "@/components/Layout";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Check } from "lucide-react";
-import vert from "@/assets/pump-vertical-inline.jpg";
-import end from "@/assets/pump-end-suction.jpg";
-import back from "@/assets/pump-back-pullout.jpg";
-import split from "@/assets/pump-split-casing.jpg";
-import fire from "@/assets/firepumpset.jpg";
-import panel from "@/assets/control-panel.jpg";
-import sub from "@/assets/install-firepump.jpg";
-import collection from "@/assets/products-collection.jpg";
-
-const images = [vert, end, back, split, fire, sub, panel, collection];
+import { productImages } from "@/data/productImages";
 
 const Products = () => {
   const { t } = useLanguage();
@@ -35,7 +26,7 @@ const Products = () => {
             >
               <div className="aspect-[4/3] overflow-hidden bg-secondary">
                 <img
-                  src={images[i % images.length]}
+                  src={productImages[i]}
                   alt={p.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   loading="lazy"
