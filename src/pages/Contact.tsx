@@ -1,26 +1,46 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { Layout } from "@/components/Layout";
-import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { toast } from "sonner";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const { t } = useLanguage();
-  const [submitting, setSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setTimeout(() => {
-      toast.success(t.contact.sent);
-      (e.target as HTMLFormElement).reset();
-      setSubmitting(false);
-    }, 600);
+  const buildMessage = () => {
+    if (!formRef.current || !formRef.current.reportValidity()) return null;
+    const data = new FormData(formRef.current);
+    const name = String(data.get("name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const company = String(data.get("company") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+
+    const lines = [
+      `${t.contact.formName}: ${name}`,
+      `${t.contact.formEmail}: ${email}`,
+      ...(company ? [`${t.contact.formCompany}: ${company}`] : []),
+      "",
+      message,
+    ];
+
+    return { name, subject: `${t.contact.subjectPrefix} ${name}`, body: lines.join("\n") };
+  };
+
+  const handleSendMail = () => {
+    const result = buildMessage();
+    if (!result) return;
+    window.location.href = `mailto:${t.contact.email}?subject=${encodeURIComponent(result.subject)}&body=${encodeURIComponent(result.body)}`;
+  };
+
+  const handleSendWhatsapp = () => {
+    const result = buildMessage();
+    if (!result) return;
+    const digits = t.contact.phone.replace(/\D/g, "");
+    window.open(`https://wa.me/${digits}?text=${encodeURIComponent(result.body)}`, "_blank");
   };
 
   return (
@@ -42,8 +62,19 @@ const Contact = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{t.contact.addressLabel}</div>
-                  <div className="text-sm text-foreground leading-relaxed">{t.contact.address}</div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{t.contact.officeRiyadh}</div>
+                  <div className="text-sm text-foreground leading-relaxed">{t.contact.address1}</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-card rounded-2xl border border-border p-7 shadow-card-soft">
+              <div className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-lg bg-gradient-brand text-primary-foreground flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{t.contact.officeBuraidah}</div>
+                  <div className="text-sm text-foreground leading-relaxed">{t.contact.address2}</div>
                 </div>
               </div>
             </div>
@@ -58,9 +89,20 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+            <div className="bg-card rounded-2xl border border-border p-7 shadow-card-soft">
+              <div className="flex items-start gap-4">
+                <div className="w-11 h-11 rounded-lg bg-gradient-brand text-primary-foreground flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{t.contact.phoneLabel}</div>
+                  <a href={`tel:${t.contact.phone.replace(/\s+/g, "")}`} className="text-sm text-foreground hover:text-accent transition-colors" dir="ltr">{t.contact.phone}</a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <form onSubmit={onSubmit} className="lg:col-span-3 bg-card rounded-2xl border border-border p-8 shadow-elegant space-y-5">
+          <form ref={formRef} onSubmit={(e) => e.preventDefault()} className="lg:col-span-3 bg-card rounded-2xl border border-border p-8 shadow-elegant space-y-5">
             <div className="grid sm:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <Label htmlFor="name">{t.contact.formName}</Label>
@@ -79,9 +121,16 @@ const Contact = () => {
               <Label htmlFor="message">{t.contact.formMessage}</Label>
               <Textarea id="message" name="message" rows={5} required />
             </div>
-            <Button type="submit" size="lg" disabled={submitting} className="bg-gradient-brand hover:opacity-95 shadow-card-soft w-full sm:w-auto">
-              {t.contact.formSubmit}
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button type="button" onClick={handleSendMail} size="lg" className="bg-gradient-brand hover:opacity-95 shadow-card-soft flex-1">
+                <Mail className="w-4 h-4" />
+                {t.contact.formSendMail}
+              </Button>
+              <Button type="button" onClick={handleSendWhatsapp} size="lg" variant="outline" className="flex-1 bg-green-500 hover:bg-green-600 text-white">
+                <MessageCircle className="w-4 h-4" />
+                {t.contact.formSendWhatsapp}
+              </Button>
+            </div>
           </form>
         </div>
       </section>
