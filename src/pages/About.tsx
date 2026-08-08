@@ -1,7 +1,9 @@
 import { Layout } from "@/components/Layout";
 import { SectionHeading } from "@/components/SectionHeading";
+import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Target, Eye, Award, Users } from "lucide-react";
+import { Target, Eye, Award, Users, Download } from "lucide-react";
+import companyProfile from "@/data/companyProfile.json";
 
 const About = () => {
   const { t } = useLanguage();
@@ -43,6 +45,14 @@ const About = () => {
             <p className="mt-6 text-lg text-primary-foreground/85 leading-relaxed">
               {t.aboutPreview.body}
             </p>
+            {companyProfile.pdf && (
+              <Button asChild size="lg" variant="secondary" className="mt-8">
+                <a href={companyProfile.pdf} download="TVIS-Overview.pdf">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download TVIS Overview
+                </a>
+              </Button>
+            )}
           </div>
         </div>
       </section>

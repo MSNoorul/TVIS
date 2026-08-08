@@ -13,6 +13,7 @@ import Projects from "./pages/Projects.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import { ChatWidget } from "./components/chatbot/ChatWidget.tsx";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <ChatWidget />
       </TooltipProvider>
     </LanguageProvider>
   </QueryClientProvider>
