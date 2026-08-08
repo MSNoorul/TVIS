@@ -189,6 +189,10 @@ export const translations = {
         eyebrow: "Pumps · Electrical · Mechanical",
         title: "Authorised channel for global leaders",
       },
+      featured: {
+        eyebrow: "Closest to TVIS",
+        title: "Our Key Partners",
+      },
       categories: {
         pumps: "Global Pump Manufacturing Partners",
         electrical: "Electrical Brand Partners",
@@ -413,6 +417,10 @@ export const translations = {
       heading: {
         eyebrow: "مضخات · كهرباء · ميكانيكا",
         title: "قناة معتمدة لكبرى العلامات العالمية",
+      },
+      featured: {
+        eyebrow: "الأقرب إلى TVIS",
+        title: "شركاؤنا الرئيسيون",
       },
       categories: {
         pumps: "شركاء التصنيع العالميون للمضخات",

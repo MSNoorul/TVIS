@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { BrandLogoCard } from "@/components/BrandLogoCard";
 import { brands, type BrandMark } from "@/data/brands";
+import { featuredBrands } from "@/data/featuredBrands";
 import { Droplet, Zap, Settings2 } from "lucide-react";
 
 const categoryOrder: BrandMark["category"][] = ["pumps", "electrical", "mechanical"];
@@ -18,6 +19,21 @@ const Brands = () => {
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">Partners</div>
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold">{t.brands.title}</h1>
           <p className="mt-5 text-lg text-primary-foreground/85">{t.brands.subtitle}</p>
+        </div>
+      </section>
+
+      <section className="pt-20 sm:pt-24">
+        <div className="container">
+          <SectionHeading
+            align="center"
+            eyebrow={t.brands.featured.eyebrow}
+            title={t.brands.featured.title}
+          />
+          <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {featuredBrands.map((b, i) => (
+              <BrandLogoCard key={i} brand={b} />
+            ))}
+          </div>
         </div>
       </section>
 
