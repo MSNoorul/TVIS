@@ -9,6 +9,9 @@ import { Droplet, Zap, Settings2 } from "lucide-react";
 const categoryOrder: BrandMark["category"][] = ["pumps", "electrical", "mechanical"];
 const categoryIcons = { pumps: Droplet, electrical: Zap, mechanical: Settings2 };
 
+const featuredNames = new Set(featuredBrands.map((b) => b.name));
+const mainBrands = brands.filter((b) => !featuredNames.has(b.name));
+
 const Brands = () => {
   const { t } = useLanguage();
 
@@ -54,7 +57,7 @@ const Brands = () => {
                     <h3 className="font-display font-bold text-lg text-primary">{t.brands.categories[cat]}</h3>
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {brands
+                    {mainBrands
                       .filter((b) => b.category === cat)
                       .map((b, i) => (
                         <BrandLogoCard key={i} brand={b} />

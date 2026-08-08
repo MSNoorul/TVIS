@@ -1,13 +1,20 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
-import navIcon from "@/assets/tvis-logo.png";
+import { cn } from "@/lib/utils";
+import navIcon from "@/assets/tvis-logo-nobg.png";
 
-export const Logo = ({ inverted = false }: { inverted?: boolean }) => {
+export const Logo = ({
+  inverted = false,
+  withBackground = false,
+}: {
+  inverted?: boolean;
+  withBackground?: boolean;
+}) => {
   const { t } = useLanguage();
   return (
     <Link to="/" className="flex items-center gap-3 group">
       <div className="relative">
-        <div className=" bg-white  rounded-xl flex items-center justify-center">
+        <div className={cn("flex items-center justify-center", withBackground && "bg-white rounded-xl")}>
           <img src={navIcon} alt="TVIS Logo" className="" />
         </div>
       </div>

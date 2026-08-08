@@ -1,0 +1,44 @@
+{
+  "intro_en": {
+    "eyebrow": "About",
+    "title": "Who We Are",
+    "body": "TVIS operates under a newly updated commercial registration, marking a strategic evolution of our business identity. Although the CR has been renewed, our presence in the Saudi market extends well over a decade. For more than 10 years, our team has been actively serving clients in Riyadh and Buraidah, delivering pump solutions, technical support, and industrial services under previous company structures. Today, with our updated CR name and number, we continue the same trusted journey with enhanced capabilities, clearer organizational direction, and expanded partnerships—ensuring stronger performance and consistent service excellence for all our clients",
+    "cta": "Learn More"
+  },
+  "intro_ar": {
+    "eyebrow": "عن ",
+    "title": "من نحن",
+    "body": "تعمل شركة TVIS بموجب سجل تجاري مُحدَّث يعكس التطور الاستراتيجي لهوية أعمالنا. وعلى الرغم من تجديد السجل التجاري، فإن وجودنا في السوق السعودية يمتد لأكثر من عشر سنوات. فعلى مدار أكثر من عقد من الزمن، عمل فريقنا بنشاط على خدمة العملاء في الرياض وبريدة، من خلال تقديم حلول المضخات والدعم الفني والخدمات الصناعية ضمن هياكل مؤسسية سابقة.\n\nواليوم، ومع تحديث اسم السجل التجاري ورقمه، نواصل المسيرة نفسها التي اكتسبت ثقة عملائنا، مع تعزيز قدراتنا وتوضيح توجهنا التنظيمي وتوسيع نطاق شراكاتنا، بما يضمن أداءً أقوى ومستوىً ثابتًا من التميز في تقديم الخدمات لجميع عملائنا.",
+    "cta": "اعرف المزيد"
+  },
+  "pillars": [
+    {
+      "icon": "award",
+      "title_en": "Quality",
+      "body_en": "We deliver high-quality pump systems backed by deep technical expertise and strong global manufacturer partnerships, trusted for precise selection and reliable support.",
+      "title_ar": "Quality",
+      "body_ar": "We deliver high-quality pump systems backed by deep technical expertise and strong global manufacturer partnerships, trusted for precise selection and reliable support."
+    },
+    {
+      "icon": "users",
+      "title_en": "Partnership",
+      "body_en": "Our partner network with major global brands gives us dedicated sales, technical, and electrical support — ensuring fast response in critical situations.",
+      "title_ar": "Partnership",
+      "body_ar": "Our partner network with major global brands gives us dedicated sales, technical, and electrical support — ensuring fast response in critical situations."
+    },
+    {
+      "icon": "eye",
+      "title_en": "Vision",
+      "body_en": "To be a trusted pump supplier known for quality, innovation, and smart investments supporting long-term reliability and service excellence.",
+      "title_ar": "Vision",
+      "body_ar": "To be a trusted pump supplier known for quality, innovation, and smart investments supporting long-term reliability and service excellence."
+    },
+    {
+      "icon": "target",
+      "title_en": "Mission",
+      "body_en": "To deliver reliable, high-quality pump solutions with great service and support, meeting every customer need through trusted products.",
+      "title_ar": "Mission",
+      "body_ar": "To deliver reliable, high-quality pump solutions with great service and support, meeting every customer need through trusted products."
+    }
+  ]
+}

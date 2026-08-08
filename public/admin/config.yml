@@ -40,3 +40,81 @@ collections:
                 name: "scope"
                 widget: "list"
                 label_singular: "Scope item"
+  - name: "brands"
+    label: "Brands"
+    files:
+      - file: "src/data/brands.json"
+        label: "Partner Brands"
+        name: "brands"
+        fields:
+          - label: "Brands"
+            name: "brands"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.category}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["pumps", "electrical", "mechanical"]
+              - label: "Logo"
+                name: "logo"
+                widget: "image"
+                media_folder: "public/uploads/brands"
+                public_folder: "/uploads/brands"
+      - file: "src/data/featuredBrands.json"
+        label: "Featured Brands"
+        name: "featuredBrands"
+        fields:
+          - label: "Featured Brands"
+            name: "featuredBrands"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.category}}"
+            hint: "Spotlight brands shown at the top of the Brands page. If a brand is featured here, it's automatically hidden from the full grid below to avoid duplicates."
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["pumps", "electrical", "mechanical"]
+              - label: "Logo"
+                name: "logo"
+                widget: "image"
+                media_folder: "public/uploads/brands/featured"
+                public_folder: "/uploads/brands/featured"
+  - name: "about"
+    label: "About Page"
+    files:
+      - file: "src/data/about.json"
+        label: "About Content"
+        name: "about"
+        fields:
+          - label: "Intro (English)"
+            name: "intro_en"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Button text", name: "cta", widget: "string" }
+          - label: "Intro (Arabic)"
+            name: "intro_ar"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Button text", name: "cta", widget: "string" }
+          - label: "Pillars (Why We're Your Best Choice)"
+            name: "pillars"
+            widget: "list"
+            summary: "{{fields.title_en}}"
+            fields:
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["award", "users", "eye", "target"]
+              - { label: "Title (English)", name: "title_en", widget: "string" }
+              - { label: "Body (English)", name: "body_en", widget: "text" }
+              - { label: "Title (Arabic)", name: "title_ar", widget: "string" }
+              - { label: "Body (Arabic)", name: "body_ar", widget: "text" }

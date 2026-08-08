@@ -1,0 +1,8 @@
+{
+  "featuredBrands": [
+    { "name": "Calpeda", "category": "pumps", "logo": "/uploads/brands/featured/calpeda.png" },
+    { "name": "Grundfos", "category": "pumps", "logo": "/uploads/brands/featured/grundfos.png" },
+    { "name": "KSB", "category": "pumps", "logo": "/uploads/brands/featured/ksb.png" },
+    { "name": "WILO", "category": "pumps", "logo": "/uploads/brands/featured/wilo.png" }
+  ]
+}

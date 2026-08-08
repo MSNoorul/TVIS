@@ -13,7 +13,7 @@ export const translations = {
       cta: "Get a Quote",
     },
     hero: {
-      eyebrow: "Trading & Contracting · Riyadh & Buraidah",
+      eyebrow: "Trading & Contracting · Saudi Arabia",
       title: "Engineered Pump Systems for Critical Infrastructure",
       subtitle:
         "TVIS supplies high-performance pumps and complete pump systems from trusted global manufacturers — backed by full technical, electrical, and on-site service.",
@@ -39,12 +39,6 @@ export const translations = {
         "Pools & Wellness",
         "Hot, Chilled & Circulation Water",
       ],
-    },
-    aboutPreview: {
-      eyebrow: "About",
-      title: "Who We Are",
-      body:
-        "TVIS operates under a newly updated commercial registration, marking a strategic evolution of our business identity. Although the CR has been renewed, our presence in the Saudi market extends well over a decade. For more than 10 years, our team has been actively serving clients in Riyadh and Buraidah, delivering pump solutions, technical support, and industrial services under previous company structures. Today, with our updated CR name and number, we continue the same trusted journey with enhanced capabilities, clearer organizational direction, and expanded partnerships—ensuring stronger performance and consistent service excellence for all our clients",
     },
     services: {
       title: "Services",
@@ -217,6 +211,7 @@ export const translations = {
       phone: "+966 568262257",
       formName: "Your Name",
       formEmail: "Email Address",
+      formPhone: "Phone Number",
       formCompany: "Company",
       formMessage: "How can we help?",
       formSendMail: "Send via Email",
@@ -266,14 +261,6 @@ export const translations = {
         "المسابح والاستجمام",
         "المياه الساخنة والمبردة",
       ],
-    },
-    aboutPreview: {
-      eyebrow: "عن ",
-      title: "من نحن",
-      body: `تعمل شركة TVIS بموجب سجل تجاري مُحدَّث يعكس التطور الاستراتيجي لهوية أعمالنا. وعلى الرغم من تجديد السجل التجاري، فإن وجودنا في السوق السعودية يمتد لأكثر من عشر سنوات. فعلى مدار أكثر من عقد من الزمن، عمل فريقنا بنشاط على خدمة العملاء في الرياض وبريدة، من خلال تقديم حلول المضخات والدعم الفني والخدمات الصناعية ضمن هياكل مؤسسية سابقة.
-
-واليوم، ومع تحديث اسم السجل التجاري ورقمه، نواصل المسيرة نفسها التي اكتسبت ثقة عملائنا، مع تعزيز قدراتنا وتوضيح توجهنا التنظيمي وتوسيع نطاق شراكاتنا، بما يضمن أداءً أقوى ومستوىً ثابتًا من التميز في تقديم الخدمات لجميع عملائنا.
-`,
     },
     services: {
       title: "خدماتنا",
@@ -446,6 +433,7 @@ export const translations = {
       phone: "+966 568262257",
       formName: "الاسم",
       formEmail: "البريد الإلكتروني",
+      formPhone: "رقم الهاتف",
       formCompany: "الشركة",
       formMessage: "كيف يمكننا المساعدة؟",
       formSendMail: "إرسال عبر البريد الإلكتروني",
