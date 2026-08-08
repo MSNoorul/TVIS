@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="mt-24 bg-primary text-primary-foreground">
       <div className="container py-16 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2 space-y-4">
-          <Logo inverted />
+          <Logo inverted withBackground />
           <p className="text-sm text-primary-foreground/70 max-w-md leading-relaxed">
             {t.hero.subtitle}
           </p>

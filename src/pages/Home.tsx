@@ -7,11 +7,13 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import heroImg from "@/assets/hero-pumproom.jpg";
 import productsCollection from "@/assets/products-collection.jpg";
 import installImg from "@/assets/TVIS-Office.jpg";
+import { getAboutIntro } from "@/data/about";
 
 const sectorIcons = [Factory, Building2, Sprout, Building2, Waves, Pickaxe, Bath, Snowflake];
 
 const Home = () => {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const aboutIntro = getAboutIntro(lang);
 
   return (
     <Layout>
@@ -86,13 +88,13 @@ UL/FM-compliant fire pump sets designed and installed to meet fire safety codes 
           </div>
           <div>
             <SectionHeading
-              eyebrow={t.aboutPreview.eyebrow}
-              title={t.aboutPreview.title}
-              subtitle={t.aboutPreview.body}
+              eyebrow={aboutIntro.eyebrow}
+              title={aboutIntro.title}
+              subtitle={aboutIntro.body}
             />
             <div className="mt-8">
               <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                <Link to="/about">{t.aboutPreview.cta} <ArrowRight className="w-4 h-4 ms-2 rtl:rotate-180" /></Link>
+                <Link to="/about">{aboutIntro.cta} <ArrowRight className="w-4 h-4 ms-2 rtl:rotate-180" /></Link>
               </Button>
             </div>
           </div>

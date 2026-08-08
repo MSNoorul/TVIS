@@ -16,12 +16,14 @@ const Contact = () => {
     const data = new FormData(formRef.current);
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
     const company = String(data.get("company") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
 
     const lines = [
       `${t.contact.formName}: ${name}`,
       `${t.contact.formEmail}: ${email}`,
+      ...(phone ? [`${t.contact.formPhone}: ${phone}`] : []),
       ...(company ? [`${t.contact.formCompany}: ${company}`] : []),
       "",
       message,
@@ -113,9 +115,15 @@ const Contact = () => {
                 <Input id="email" name="email" type="email" required />
               </div>
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="company">{t.contact.formCompany}</Label>
-              <Input id="company" name="company" />
+            <div className="grid sm:grid-cols-2 gap-5">
+              <div className="space-y-2">
+                <Label htmlFor="phone">{t.contact.formPhone}</Label>
+                <Input id="phone" name="phone" type="tel" inputMode="tel" dir="ltr" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="company">{t.contact.formCompany}</Label>
+                <Input id="company" name="company" />
+              </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">{t.contact.formMessage}</Label>

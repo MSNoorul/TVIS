@@ -2,34 +2,14 @@ import { Layout } from "@/components/Layout";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Target, Eye, Award, Users, Download } from "lucide-react";
+import { Download } from "lucide-react";
 import companyProfile from "@/data/companyProfile.json";
+import { getAboutIntro, getAboutPillars } from "@/data/about";
 
 const About = () => {
-  const { t } = useLanguage();
-
-  const pillars = [
-    {
-      icon: Award,
-      title: "Quality",
-      body: "We deliver high-quality pump systems backed by deep technical expertise and strong global manufacturer partnerships, trusted for precise selection and reliable support.",
-    },
-    {
-      icon: Users,
-      title: "Partnership",
-      body: "Our partner network with major global brands gives us dedicated sales, technical, and electrical support — ensuring fast response in critical situations.",
-    },
-    {
-      icon: Eye,
-      title: "Vision",
-      body: "To be a trusted pump supplier known for quality, innovation, and smart investments supporting long-term reliability and service excellence.",
-    },
-    {
-      icon: Target,
-      title: "Mission",
-      body: "To deliver reliable, high-quality pump solutions with great service and support, meeting every customer need through trusted products.",
-    },
-  ];
+  const { lang } = useLanguage();
+  const intro = getAboutIntro(lang);
+  const pillars = getAboutPillars(lang);
 
   return (
     <Layout>
@@ -37,13 +17,13 @@ const About = () => {
         <div className="container">
           <div className="max-w-3xl animate-fade-up">
             <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">
-              {t.aboutPreview.eyebrow}
+              {intro.eyebrow}
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              {t.aboutPreview.title}
+              {intro.title}
             </h1>
             <p className="mt-6 text-lg text-primary-foreground/85 leading-relaxed">
-              {t.aboutPreview.body}
+              {intro.body}
             </p>
             {companyProfile.pdf && (
               <Button asChild size="lg" variant="secondary" className="mt-8">

@@ -22,10 +22,10 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border">
-      <div className="container flex items-center justify-between gap-1 h-18 py-3">
+      <div className="container flex items-center justify-between gap-4 h-18 py-3">
         <Logo />
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1 ">
           {links.map((l) => (
             <NavLink
               key={l.to}
