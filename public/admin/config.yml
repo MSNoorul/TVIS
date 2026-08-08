@@ -6,6 +6,19 @@ media_folder: "public/uploads/projects"
 public_folder: "/uploads/projects"
 
 collections:
+  - name: "company_profile"
+    label: "Company Profile"
+    files:
+      - file: "src/data/companyProfile.json"
+        label: "TVIS Overview PDF"
+        name: "companyProfile"
+        fields:
+          - label: "PDF File"
+            name: "pdf"
+            widget: "file"
+            media_folder: "public/uploads/documents"
+            public_folder: "/uploads/documents"
+            hint: "Upload the TVIS Overview PDF shown on the About page download button."
   - name: "projects"
     label: "Projects"
     files:

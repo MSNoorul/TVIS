@@ -79,8 +79,9 @@ const Home = () => {
             />
             <div className="absolute -bottom-6 -end-6 hidden md:block bg-card rounded-xl shadow-card-soft p-5 border border-border max-w-[220px]">
               <ShieldCheck className="w-7 h-7 text-accent mb-2" />
-              <div className="text-sm font-semibold text-primary">Certified Engineering</div>
-              <div className="text-xs text-muted-foreground mt-1">UL/FM compliant fire pump sets and code-aligned installations.</div>
+              <div className="text-sm font-semibold text-primary">Engineered Pump Solutions</div>
+              <div className="text-xs text-muted-foreground mt-1">
+UL/FM-compliant fire pump sets designed and installed to meet fire safety codes and project requirements.</div>
             </div>
           </div>
           <div>

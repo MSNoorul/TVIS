@@ -13,6 +13,7 @@ import Projects from "./pages/Projects.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import { ChatWidget } from "./components/chatbot/ChatWidget.tsx";
 
 const queryClient = new QueryClient();
 
@@ -35,7 +36,9 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+             <ChatWidget />
         </BrowserRouter>
+     
       </TooltipProvider>
     </LanguageProvider>
   </QueryClientProvider>
