@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Check } from "lucide-react";
@@ -9,6 +10,11 @@ const Products = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Pump Products & Applications | TVIS Saudi Arabia"
+        description="Browse the TVIS pump product catalog: residential, commercial and heavy industrial pumps, control panels and systems supplied across Saudi Arabia."
+        path="/products"
+      />
       <section className="bg-gradient-brand text-primary-foreground py-20">
         <div className="container max-w-3xl animate-fade-up">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">Catalog</div>

@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -13,6 +14,11 @@ const About = () => {
 
   return (
     <Layout>
+      <SEO
+        title="About TVIS | Pump & Contracting Specialists, Saudi Arabia"
+        description="Learn about TVIS Trading & Contracting: our vision, mission and expertise supplying and installing pump systems and E&M solutions across Saudi Arabia."
+        path="/about"
+      />
       <section className="relative bg-gradient-brand text-primary-foreground py-20 sm:py-28">
         <div className="container">
           <div className="max-w-3xl animate-fade-up">

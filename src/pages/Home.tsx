@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ShieldCheck, Wrench, Cpu, Droplets, Factory, Sprout, Building2, Waves, Snowflake, Pickaxe, Bath } from "lucide-react";
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -17,6 +18,11 @@ const Home = () => {
 
   return (
     <Layout>
+      <SEO
+        title="TVIS | Pump Systems & Control Panels, Saudi Arabia"
+        description="TVIS supplies and installs high-performance pumps, control panels and complete pump systems for industrial projects across Riyadh, Buraidah and Saudi Arabia."
+        path="/"
+      />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">

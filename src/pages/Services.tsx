@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useLanguage } from "@/i18n/LanguageContext";
 import {
@@ -54,6 +55,11 @@ const Services = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Pump Services: Installation, Maintenance & Repair | TVIS"
+        description="TVIS delivers inspection, installation, commissioning, maintenance and workshop repair for pump systems and control panels across Saudi Arabia."
+        path="/services"
+      />
       <section className="bg-gradient-brand text-primary-foreground py-20">
         <div className="container max-w-3xl animate-fade-up">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">Capabilities</div>
@@ -97,7 +103,7 @@ const Services = () => {
                     {i === 6 && (
                       <img
                         src={panelImg}
-                        alt=""
+                        alt="TVIS custom-built pump control panel"
                         className="rounded-xl w-full aspect-[16/7] object-cover mt-4"
                         loading="lazy"
                       />

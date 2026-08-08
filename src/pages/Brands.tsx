@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { BrandLogoCard } from "@/components/BrandLogoCard";
@@ -17,6 +18,11 @@ const Brands = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Authorized Pump & Electrical Brand Partners | TVIS"
+        description="TVIS is an authorized channel partner for leading global pump, electrical and mechanical brands, supplied and serviced across Riyadh, Buraidah and Saudi Arabia."
+        path="/brands"
+      />
       <section className="bg-gradient-brand text-primary-foreground py-20">
         <div className="container max-w-3xl animate-fade-up">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">Partners</div>

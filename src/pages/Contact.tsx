@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -47,6 +48,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact TVIS | Pump Systems Quote, Riyadh & Buraidah"
+        description="Contact TVIS for pump system quotes and service support. Offices in Riyadh and Buraidah, Saudi Arabia — reach us by phone, email or WhatsApp."
+        path="/contact"
+      />
       <section className="bg-gradient-brand text-primary-foreground py-20">
         <div className="container max-w-3xl animate-fade-up">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">Get in touch</div>
