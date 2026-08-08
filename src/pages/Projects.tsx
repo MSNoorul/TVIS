@@ -1,4 +1,5 @@
 import { Layout } from "@/components/Layout";
+import { SEO } from "@/components/SEO";
 import { SectionHeading } from "@/components/SectionHeading";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { MapPin, Calendar, Wrench } from "lucide-react";
@@ -28,6 +29,11 @@ const Projects = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Completed Pump & E&M Projects | TVIS Saudi Arabia"
+        description="Case studies of pump systems, control panels and mechanical-electrical installations completed by TVIS across Riyadh, Buraidah and Saudi Arabia."
+        path="/projects"
+      />
       <section className="bg-gradient-brand text-primary-foreground py-20">
         <div className="container max-w-3xl animate-fade-up">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-accent mb-3">Case Studies</div>
@@ -81,9 +87,9 @@ const Projects = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="font-display font-bold text-base sm:text-lg text-primary leading-snug mb-3 min-h-[3rem]">
+                <h2 className="font-display font-bold text-base sm:text-lg text-primary leading-snug mb-3 min-h-[3rem]">
                   {p.title}
-                </h3>
+                </h2>
                 <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-muted-foreground mb-4">
                   <span className="inline-flex items-center gap-1">
                     <MapPin className="w-3.5 h-3.5 text-accent" />
