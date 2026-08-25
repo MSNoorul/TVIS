@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ShieldCheck, Wrench, Cpu, Droplets, Factory, Sprout, Building2, Waves, Snowflake, Pickaxe, Bath } from "lucide-react";
+import { ArrowRight, ShieldCheck, Wrench, Droplets, PanelsTopLeft, Hammer, Activity, Factory, Sprout, Building2, Waves, Snowflake, Pickaxe, Bath } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { SEO } from "@/components/SEO";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -135,13 +135,13 @@ UL/FM-compliant fire pump sets designed and installed to meet fire safety codes 
         <div className="container">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <SectionHeading title={t.services.title} subtitle={t.services.subtitle} />
-            <Button asChild variant="ghost" className="self-start text-primary hover:text-accent">
+            <Button asChild variant="ghost" className="self-start text-primary hover:text-white">
               <Link to="/services">{t.services.title} <ArrowRight className="w-4 h-4 ms-1 rtl:rotate-180" /></Link>
             </Button>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {t.services.items.slice(0, 6).map((s, i) => {
-              const Icons = [Wrench, ShieldCheck, Cpu, Wrench, Cpu, ShieldCheck];
+              const Icons = [Droplets, PanelsTopLeft, Hammer, ShieldCheck, Wrench, Activity];
               const Icon = Icons[i] ?? Wrench;
               return (
                 <div key={i} className="group relative bg-card rounded-2xl p-7 border border-border hover:shadow-elegant transition-all duration-300 overflow-hidden">

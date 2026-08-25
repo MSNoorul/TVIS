@@ -34,7 +34,7 @@ import {
 import panelImg from "@/assets/control-panel.jpg";
 
 // 1:1 with 'services.items' in src/i18n/translations.ts — same order, same length.
-const icons = [ShieldCheck, Wrench, Activity, Hammer, Droplets, PanelsTopLeft, Plug];
+const icons = [Droplets, PanelsTopLeft, Hammer, ShieldCheck, Wrench, Activity, Plug];
 
 // 1:1 with 'services.process.items' in src/i18n/translations.ts — same order, same length.
 const processIcons = [
