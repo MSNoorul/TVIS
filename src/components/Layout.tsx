@@ -22,9 +22,9 @@ const localBusinessJsonLd = {
       telephone: "+966568262257",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Building No: 7955, Al Furosyah, Al Saadah Dist",
+        streetAddress: "Building No: 3688, Khurais Branch Rd, Al-Rawdah Dist",
         addressLocality: "Riyadh",
-        postalCode: "14258",
+        postalCode: "13211",
         addressCountry: "SA",
       },
       areaServed: "Saudi Arabia",
